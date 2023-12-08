@@ -2,6 +2,6 @@
 {
     public sealed class ArrangementData
     {
-        public SpriteData[] Sprites = System.Array.Empty<SpriteData>();
+        public SpriteData[] Sprites;
     }
 }
