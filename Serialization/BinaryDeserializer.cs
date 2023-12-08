@@ -16,6 +16,7 @@ public static class BinaryDeserializer
 
                 for (int j = 0; j < sprites.Length; j++)
                 {
+                    // Each sprite is 16 bytes long, but what comes after the 12th byte is a bit of a mystery.
                     SpriteData sprite = new SpriteData
                     {
                         // Unlike every other value, the sprite part's world position is signed.
@@ -27,12 +28,14 @@ public static class BinaryDeserializer
                         
                         TexturePositionX = binaryReader.ReadUInt16(),
                         TexturePositionY = binaryReader.ReadUInt16(),
+                        
+                        FlipH = binaryReader.ReadBoolean(),
+                        _UnknownVal1 = binaryReader.ReadBoolean(),
+                        _UnknownVal2 = binaryReader.ReadBoolean(),
+                        _UnknownVal3 = binaryReader.ReadBoolean(),
                     };
 
                     sprites[j] = sprite;
-                    
-                    // Skip the next 4 bytes, there's some padding between sprites for some reason.
-                    binaryReader.ReadUInt32();
                 }
 
                 arrangement.Sprites = sprites;
@@ -43,7 +46,7 @@ public static class BinaryDeserializer
 
             // Some flags that come here.
             // I don't think they're particularly useful. I managed to change the visibility with them, perhaps something like the unit's shadow graphic is also set using this?
-            ushort _uselessFlags = binaryReader.ReadUInt16();
+            ushort _unkownFlags = binaryReader.ReadUInt16();
 
             FrameData[] frames = new FrameData[binaryReader.ReadUInt16()];
 
@@ -57,7 +60,7 @@ public static class BinaryDeserializer
 
                 frames[i] = frame;
                 
-                // Seek to the next frame. Not sure what goes here.
+                // Seek to the next frame. Not sure what goes here. Maybe some kinds of effects triggers...?
                 for (int j = 0; j < 8; j++)
                 {
                     binaryReader.ReadUInt16();

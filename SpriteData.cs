@@ -2,12 +2,18 @@
 {
     public sealed class SpriteData
     {
-        public short WorldPositionX = 0;
-        public short WorldPositionY = 0;
+        public short WorldPositionX;
+        public short WorldPositionY;
 
-        public ushort TexturePositionX = 0;
-        public ushort TexturePositionY = 0;
-        public ushort TextureSizeX = 0;
-        public ushort TextureSizeY = 0;
+        public ushort TextureSizeX;
+        public ushort TextureSizeY;
+        
+        public ushort TexturePositionX;
+        public ushort TexturePositionY;
+
+        public bool FlipH;
+        public bool _UnknownVal1;
+        public bool _UnknownVal2;
+        public bool _UnknownVal3;
     }
 }
