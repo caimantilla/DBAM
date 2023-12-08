@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBAM", "DBAM.csproj", "{CD60AC46-9173-4AD5-9705-915ABD21BFEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD60AC46-9173-4AD5-9705-915ABD21BFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD60AC46-9173-4AD5-9705-915ABD21BFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD60AC46-9173-4AD5-9705-915ABD21BFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD60AC46-9173-4AD5-9705-915ABD21BFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
