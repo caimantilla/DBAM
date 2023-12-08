@@ -7,6 +7,13 @@
         
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.1</Version>
+        <Title>DBAM</Title>
+        <Authors>caiman</Authors>
+        <Description>Parser and data structure for DBAM animations (Devil Survivor Overclocked)</Description>
+        <Company />
+        <Product />
     </PropertyGroup>
     
     <ItemGroup>
